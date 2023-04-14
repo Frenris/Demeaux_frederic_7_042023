@@ -1,11 +1,19 @@
-import '../../App.css'
+import Banner from "../../components/Banner"
+import Grid from "../../components/Grid"
+import styled from "styled-components"
+
+const HomeWrapper = styled.div`
+  justify-content: center;
+  padding-inline: 2vw;
+`
 
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
-    
+    <HomeWrapper>
+        <Banner />
+        <Grid /> 
+    </HomeWrapper>
+   
   )
 }
 

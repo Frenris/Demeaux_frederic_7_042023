@@ -1,8 +1,22 @@
-function About() {
+import BannerAbout from '../../components/BannerAbout'
+import styled from 'styled-components'
+import React from 'react'
+import AboutCollapse from '../../components/aboutCollapse'
+
+const AboutWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 6rem;
+`
+
+const About = () => {
   return (
-    <div>
-      <h1>A propos</h1>
-    </div>
+    <AboutWrapper>
+      <BannerAbout />
+      <AboutCollapse />
+    </AboutWrapper>
   )
 }
 
