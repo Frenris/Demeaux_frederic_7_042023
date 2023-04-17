@@ -5,29 +5,34 @@ import {Link} from "react-router-dom"
 const CardContainer = styled.div`
     background-image: linear-gradient(to top, ${colors.secondary}, ${colors.primary});
     border-radius: 1rem;
-    flex-basis: 30%;
     display: grid;
     align-items: end;
-    min-width: 200px;
-    min-height: 200px;
+    width: 340px;
+    height: 340px;
+    margin: 20px;
+
+    @media screen and (width <= 768px) { 
+      width: 100%;
+      height: 255px;
+      margin: 20px 0px;
+    }
 `
 
-const StyledTitle = styled.div`
-    width: 30%;
-        margin-inline-start: 0.5rem;
-        margin-block-end: 0.5rem;
-        color: ${colors.gridBackgroundLight};
-        font-size: 18px;
+const StyledTitle = styled.a`
+    margin-inline-start: 0.5rem;
+    margin-block-end: 0.5rem;
+    padding: 10px;
+    color: ${colors.gridBackgroundLight};
+    font-size: 18px;
+    text-decoration: none;
 `
 
-function Card() {
+const Card = () => {
   return (
     <CardContainer>
-        <div>
-            <Link to ="/flat">
-                <StyledTitle>Titre de la location</StyledTitle>
-            </Link>
-        </div>
+        <Link to ="/flat">
+            <StyledTitle>Titre de la location</StyledTitle>
+        </Link>
     </CardContainer>
   )
 }

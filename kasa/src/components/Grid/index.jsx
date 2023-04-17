@@ -3,25 +3,28 @@ import colors from "../../utils/style/colors"
 import Card from "../Card/index"
 
 const GridContainer = styled.div`
-    background-color: ${colors.gridBackgroundDark};
-    min-height: 50vh;
+    background-color: ${colors.gridBackgroundLight};
     border-radius: 2rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     padding: 1rem;
+    margin: 30px 0;
     justify-content: space-between;
+
+    @media screen and (width <= 768px) {
+        justify-content: center;
+        background-color: ${colors.tertiary};
+        padding: 0;
+    }
 `
 
-function Grid() {
+const Grid = () => {
   return (
     <GridContainer>
-        <div>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-        </div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
     </GridContainer>
     
   )

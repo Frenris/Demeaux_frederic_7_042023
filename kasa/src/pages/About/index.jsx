@@ -9,6 +9,10 @@ const AboutWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 0 6rem;
+
+  @media screen and (width <= 768px) {
+    padding: 1.5rem 1rem;
+    }
 `
 
 const About = () => {

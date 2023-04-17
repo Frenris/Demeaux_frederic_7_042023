@@ -11,7 +11,7 @@ const NavLink = styled.a`
   position: relative;
   margin-left: 30px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
   color: ${colors.primary};
   &:before,
   &:after {
@@ -33,6 +33,10 @@ const NavLink = styled.a`
   &:hover:after {
     width: 50%;
   }
+
+  @media screen and (width <= 768px) {
+    font-size: 12px;
+    }
 `
 
 const Navigation = () => {

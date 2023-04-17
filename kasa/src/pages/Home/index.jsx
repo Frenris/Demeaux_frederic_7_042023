@@ -4,7 +4,12 @@ import styled from "styled-components"
 
 const HomeWrapper = styled.div`
   justify-content: center;
-  padding-inline: 2vw;
+  padding: 0 6rem;
+  
+  @media screen and (width <= 768px) {
+    padding: 1.5rem 1rem;
+    }
+
 `
 
 function Home() {

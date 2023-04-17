@@ -3,7 +3,7 @@ const colors = {
     secondary: '#863535',
     tertiary: 'white',
     gridBackgroundDark: 'rgba(0, 0, 0, 0.119)',
-    gridBackgroundLight: '#f6f6f6',
+    gridBackgroundLight: '#f7f7f7',
     footerBackground: 'black',
 }
 

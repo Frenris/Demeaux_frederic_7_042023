@@ -11,14 +11,27 @@ const AboutWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 80%;
+
+  @media screen and (width <= 768px) {
+    width: 100%;
+    }
 `
 const TextWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   font-size: 24px;
   cursor: pointer;
+  background: ${colors.primary};
+  margin-top: 30px;
+  color: ${colors.tertiary};
+  padding: 15px;
+  border-radius: 5px;
+
+  @media screen and (width <= 768px) {
+    font-size: 12px;
+    }
 `
 
 const CollapseContentWrapper = styled.div`
@@ -26,12 +39,18 @@ const CollapseContentWrapper = styled.div`
   top: -10px;
   width: 100%;
   z-index: -1;
-  ${'' /* background: ${colors.xxxxx}; */}
+  background: ${colors.gridBackgroundLight};
+  border-radius: 5px;
 `
 const TextContent = styled.p`
   font-weight: 400;
   font-size: 24px;
-  ${'' /* color:${colors.xxxxx}; */}
+  color:${colors.primary};
+  margin: 30px 15px;
+
+  @media screen and (width <= 768px) {
+    font-size: 12px;
+    }
 `
 const ArrowIcon = styled.img`
   position: relative;

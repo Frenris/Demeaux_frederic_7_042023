@@ -1,41 +1,60 @@
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
-import Coast from "../../assets/coast.jpg"
+import Coast from '../../assets/coast.jpg'
 
-const BannerContainer = styled.div`
-    position: relative;
-    max-width: 100%;
-    padding-inline: 2vw;
-    background-image: url(${Coast});
-    background-position: 0 -450px;
-    background-size: cover;
-    min-height: 223px;
-    margin: auto;
-    border-radius: 2rem;
-    display: grid;
-    place-items: center;
-    color: ${colors.tertiary};
-    margin-bottom: 2rem;
-    &::before {
-        position:absolute;
-        content: "";
-        inset: 0;
-        opacity: 0.5;
-        border-radius: 2rem;
+const Section = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+const BannerImage = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 220px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(${Coast});
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+
+  @media screen and (width <= 768px) {
+    justify-content: flex-start;
+    height: 111px;
     }
 `
 
 const StyledTitle = styled.h1`
+  font-style: normal;
+  font-weight: 500;
   font-size: 48px;
+  text-align: center;
+  color: ${colors.tertiary};
+
+  @media screen and (width <= 768px) {
+    text-align: start;
+    font-size: 24px;
+    width: 55%;
+    padding: 0 1rem;
+    }
 `
 
 function Banner() {
   return (
-    <BannerContainer>
-        <StyledTitle>
-        Chez vous, partout et ailleurs
-      </StyledTitle>
-    </BannerContainer>
+    <Section>
+      <BannerImage>
+        <StyledTitle>Chez vous, partout et ailleurs</StyledTitle>
+      </BannerImage>
+    </Section>
   )
 }
 
