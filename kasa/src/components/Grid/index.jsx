@@ -1,32 +1,41 @@
-import styled from "styled-components"
-import colors from "../../utils/style/colors"
-import Card from "../Card/index"
+import React from 'react'
+import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
+import AppartmentsDatas from '../../datas/appartments.json'
+import Error from '../../pages/404/index'
+import GridInformation from '../GridInformation/index'
+import GridCollapse from '../GridCollapse/index'
+import Caroussel from '../Caroussel/index'
 
 const GridContainer = styled.div`
-    background-color: ${colors.gridBackgroundLight};
-    border-radius: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-    margin: 30px 0;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6rem;
 
-    @media screen and (width <= 768px) {
-        justify-content: center;
-        background-color: ${colors.tertiary};
-        padding: 0;
-    }
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `
 
 const Grid = () => {
+  const { idGrid } = useParams()
+
+  const logement = AppartmentsDatas.find(
+    (logement) => logement.id === idGrid
+  )
+
+  if (!logement) {
+    return <Error />
+  }
+
   return (
     <GridContainer>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <Caroussel />
+      <GridInformation />
+      <GridCollapse />
     </GridContainer>
-    
   )
 }
 

@@ -1,24 +1,22 @@
-import Banner from "../../components/Banner"
-import Grid from "../../components/Grid"
-import styled from "styled-components"
+import React from 'react'
+import Banner from '../../components/Banner'
+import Card from '../../components/Card'
+import styled from 'styled-components'
 
 const HomeWrapper = styled.div`
-  justify-content: center;
   padding: 0 6rem;
-  
-  @media screen and (width <= 768px) {
-    padding: 1.5rem 1rem;
-    }
 
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `
 
 function Home() {
   return (
     <HomeWrapper>
-        <Banner />
-        <Grid /> 
+      <Banner />
+      <Card />
     </HomeWrapper>
-   
   )
 }
 
