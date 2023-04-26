@@ -105,7 +105,9 @@ const AppartmentCollapse = ({ title, children }) => {
 
 const GridCollapse = () => {
   const { idGrid } = useParams()
+
   const logement = AppartmentsDatas.find((product) => product.id === idGrid)
+
   const { description, equipments } = logement
 
   return (

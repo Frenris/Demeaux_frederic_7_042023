@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import AppartmentsDatas from '../../datas/appartments.json'
-import Forward from '../../assets/arrow_forward.svg'
-import Back from '../../assets/arrow_back.svg'
+import Forward from '../../assets/right.png'
+import Back from '../../assets/left.png'
 
 const ContainerCaroussel = styled.div`
   position: relative;
@@ -19,13 +19,14 @@ const ContentCaroussel = styled.div`
   scroll-snap-type: x mandatory;
 `
 
-const AppartementImage = styled.img`
+const ImgCaroussel = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  scroll-snap-align: center;
   border-radius: 25px;
-  scroll-snap-align: start;
 `
+
 const Arrows = styled.img`
   position: absolute;
   top: 50%;
@@ -54,10 +55,14 @@ const PicturesLength = styled.div`
 
 const Caroussel = () => {
   const [current, setCurrent] = useState(0)
-  const [setScrollPosition] = useState(0)
 
-  const scrollHandle = (e) => {
-    setScrollPosition(e.target.scrollLeft)
+  const handleScroll = (e) => {
+    const element = e.target
+    const newIndex = Math.round(
+      element.scrollLeft / (element.scrollWidth / AppartmentsDatas.length)
+    )
+
+    if (newIndex !== current) setCurrent(newIndex)
   }
 
   const moveToNext = () => {
@@ -76,20 +81,13 @@ const Caroussel = () => {
   return (
     <ContainerCaroussel>
       {length > 1 && (
-        <ArrowLeft src={Back} alt="Left arrow" onClick={moveToPrevious} />
+        <ArrowLeft src={Back} alt="Flèche de gauche" onClick={moveToPrevious} />
       )}
 
-      <ContentCaroussel id="caroussel" onScroll={scrollHandle}>
-        {logement.pictures.map(
-          (picture, index) =>
-            index === current && (
-              <AppartementImage
-                key={picture}
-                src={picture}
-                alt="Photo logement"
-              />
-            )
-        )}
+      <ContentCaroussel id="caroussel" onScroll={handleScroll}>
+        {AppartmentsDatas[current].pictures.map((picture, index) => (
+          <ImgCaroussel key={index} src={picture} alt="Photo appartement" />
+        ))}
       </ContentCaroussel>
 
       {length > 1 && (

@@ -9,29 +9,39 @@ import colors from '../../utils/style/colors'
 
 const GridWrapper = styled.div`
   display: flex;
-  margin: 0px;
+  margin: 30px 0 0;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
   @media (max-width: 768px) {
     flex-direction: column;
   }
 `
 
 const LeftSection = styled.div`
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 50px;
   @media (max-width: 768px) {
-    width:100%;
+    width: 100%;
   }
 `
 
 const TitleWrapper = styled.div`
-  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 `
 
 const Title = styled.h1`
   font-weight: 500;
-  font-size: 36px;
+  font-size: 45px;
+  line-height: 52px;
   color: ${colors.primary};
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+
   @media (max-width: 768px) {
     font-size: 18px;
   }
@@ -41,6 +51,8 @@ const Location = styled.div`
   font-weight: 500;
   font-size: 18px;
   color: ${colors.primary};
+  margin-bottom: 10px;
+
   @media (max-width: 768px) {
     font-size: 14px;
   }
@@ -48,8 +60,8 @@ const Location = styled.div`
 
 const RightSection = styled.div`
   display: flex;
-  width: 50%;
   flex-direction: column;
+  align-items: flex-end;
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: row-reverse;
@@ -58,8 +70,11 @@ const RightSection = styled.div`
 
 const GridInfo = () => {
   const { idGrid } = useParams()
+
   const logement = AppartementsDatas.find((product) => product.id === idGrid)
+
   const { title } = logement
+
   const { location } = logement
 
   return (
