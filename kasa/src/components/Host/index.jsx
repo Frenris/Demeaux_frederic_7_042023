@@ -8,9 +8,14 @@ const Host = styled.h2`
   display: flex;
   font-weight: 500;
   font-size: 18px;
+  margin-bottom: 40px;
   color: ${colors.primary};
-  width: 75%;
+  width: 100%;
   align-items: center;
+  justify-content: flex-end;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 
 const HostImage = styled.img`
@@ -18,9 +23,14 @@ const HostImage = styled.img`
   height: 64px;
   border-radius: 100%;
   object-fit: cover;
+  margin-left: 10px;
+  @media (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
 `
 
-const HostInformation = () => {
+const HostInfo = () => {
   const { idGrid } = useParams()
   const logement = AppartementsDatas.find((product) => product.id === idGrid)
   const { host } = logement
@@ -33,4 +43,4 @@ const HostInformation = () => {
   )
 }
 
-export default HostInformation
+export default HostInfo

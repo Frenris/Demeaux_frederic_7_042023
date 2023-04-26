@@ -34,7 +34,7 @@ const NavLink = styled.a`
     width: 50%;
   }
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
     font-size: 12px;
     }
 `

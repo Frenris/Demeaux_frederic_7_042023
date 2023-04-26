@@ -12,7 +12,7 @@ const ErrorTitle = styled.h1`
   color: ${colors.primary};
   margin: 80px 0 0 0;
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
     font-size: 96px;
     }
 `
@@ -23,7 +23,7 @@ const ErrorContent = styled.p`
   text-align: center;
   color: ${colors.primary};
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
     font-size: 18px;
     }
 `
@@ -59,7 +59,7 @@ const NavLink = styled.a`
     width: 50%;
   }
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
     font-size: 14px;
     }
 `

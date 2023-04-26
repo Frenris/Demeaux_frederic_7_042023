@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 import AppartmentsDatas from '../../datas/appartments.json'
 import Error from '../../pages/404/index'
-import GridInformation from '../GridInformation/index'
+import GridInfo from '../GridInformation/index'
 import GridCollapse from '../GridCollapse/index'
-import Caroussel from '../Caroussel/index'
+import Caroussel from '../Caroussel'
 
 const GridContainer = styled.div`
   display: flex;
@@ -22,9 +22,7 @@ const GridContainer = styled.div`
 const Grid = () => {
   const { idGrid } = useParams()
 
-  const logement = AppartmentsDatas.find(
-    (logement) => logement.id === idGrid
-  )
+  const logement = AppartmentsDatas.find((logement) => logement.id === idGrid)
 
   if (!logement) {
     return <Error />
@@ -33,7 +31,7 @@ const Grid = () => {
   return (
     <GridContainer>
       <Caroussel />
-      <GridInformation />
+      <GridInfo />
       <GridCollapse />
     </GridContainer>
   )

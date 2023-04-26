@@ -12,7 +12,7 @@ const AboutWrapper = styled.div`
   align-items: center;
   width: 80%;
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
     width: 100%;
     }
 `
@@ -29,7 +29,7 @@ const TextWrapper = styled.div`
   padding: 15px;
   border-radius: 5px;
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
     font-size: 12px;
     }
 `
@@ -48,7 +48,7 @@ const TextContent = styled.p`
   color:${colors.primary};
   margin: 30px 15px;
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
     font-size: 12px;
     }
 `

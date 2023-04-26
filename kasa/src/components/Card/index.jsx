@@ -13,6 +13,7 @@ const AppartmentWrapper = styled.div`
   transition: transform 0.3s ease-in-out;
   @media (max-width: 768px) {
     margin: 20px 0px;
+    height: 255px;
   }
 `
 
@@ -51,12 +52,21 @@ const CardWrapper = styled.div`
   border-radius: 25px;
   gap: 50px;
   background: ${colors.gridBackgroundLight};
+  @media (max-width: 768px) {
+    padding: 0px;
+    gap: 0px;
+    background: ${colors.tertiary};
+  }
 `
 
 const CardContainer = styled.div`
   flex: 0 0 340px;
   margin: 56px 20px;
   min-width: 250px;
+  @media (max-width: 768px) {
+  flex: 0px;
+  margin: 0px;
+  }
   &:first-child {
     margin-left: 0;
   }

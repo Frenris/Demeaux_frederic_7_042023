@@ -10,7 +10,7 @@ const AboutWrapper = styled.div`
   flex-direction: column;
   padding: 0 6rem;
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
     padding: 1.5rem 1rem;
     }
 `
