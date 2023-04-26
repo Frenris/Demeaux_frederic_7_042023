@@ -1,8 +1,8 @@
+import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
-import { useParams } from 'react-router-dom'
 import AppartmentsDatas from '../../datas/appartments.json'
-import React, { useState } from 'react'
 import Forward from '../../assets/arrow_forward.svg'
 import Back from '../../assets/arrow_back.svg'
 
@@ -15,6 +15,8 @@ const ContentCaroussel = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  scroll-bahavior: smooth;
+  scroll-snap-type: x mandatory;
 `
 
 const AppartementImage = styled.img`
@@ -69,17 +71,12 @@ const Caroussel = () => {
   const { IdGrid } = useParams()
   const logement = AppartmentsDatas.find((product) => product.id === IdGrid)
 
-  const length = logement.pictures.length
+  const length = logement?.pictures?.length || 0
 
   return (
     <ContainerCaroussel>
-
       {length > 1 && (
-        <ArrowLeft 
-        src={Back}
-        alt="Flèche de gauche"
-        onClick={moveToPrevious} 
-        />
+        <ArrowLeft src={Back} alt="Left arrow" onClick={moveToPrevious} />
       )}
 
       <ContentCaroussel id="caroussel" onScroll={scrollHandle}>
@@ -96,11 +93,7 @@ const Caroussel = () => {
       </ContentCaroussel>
 
       {length > 1 && (
-        <ArrowRight 
-        src={Forward}
-        alt="Flèche de droite"
-        onClick={moveToNext} 
-        />
+        <ArrowRight src={Forward} alt="Right arrow" onClick={moveToNext} />
       )}
 
       <PicturesLength>
