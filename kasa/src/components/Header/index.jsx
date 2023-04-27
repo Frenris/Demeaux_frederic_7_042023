@@ -6,13 +6,17 @@ import Navigation from '../nav'
 const HeaderLogo = styled.img`
   height: 68px;
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
     height: 47px;
+    width: 145px;
     }
 `
 const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
+  @media (max-width: 768px) {
+    padding: 0rem 0rem;
+    }
 `
 
 const NavContainer = styled.header`
@@ -22,8 +26,8 @@ const NavContainer = styled.header`
   padding: 3rem 6rem;
   position: relative;
 
-  @media screen and (width <= 768px) {
-    padding: 1.5rem 1rem;
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.5rem;
     }
 `
 

@@ -24,12 +24,19 @@ const ErrorContent = styled.p`
   color: ${colors.primary};
 
   @media (max-width: 768px) {
+    margin: 0 85px;
     font-size: 18px;
+    width: 55%;
     }
 `
 
-const NavLink = styled.a`
+const NavContainer = styled.div`
   display: flex;
+  justify-content: center;
+`
+
+const NavLink = styled.a`
+  display: inline;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -73,7 +80,9 @@ const Error = () => {
         <ErrorContent>
           Oups! La page que vous demandez n'existe pas.
         </ErrorContent>
-        <NavLink href="/">Retourner sur la page d’accueil</NavLink>
+        <NavContainer>
+          <NavLink href="/">Retourner sur la page d’accueil</NavLink>
+        </NavContainer>
       </ErrorWrapper>
     )
   }

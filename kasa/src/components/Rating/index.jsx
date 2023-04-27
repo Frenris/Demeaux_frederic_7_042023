@@ -11,7 +11,7 @@ const RatingWrapper = styled.div`
   align-self: flex-end;
   justify-content: flex-end;
   @media (max-width: 768px) {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
 `
 

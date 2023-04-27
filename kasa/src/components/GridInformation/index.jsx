@@ -16,6 +16,7 @@ const GridWrapper = styled.div`
   align-items: stretch;
   @media (max-width: 768px) {
     flex-direction: column;
+    margin: 15px 0 0;
   }
 `
 
@@ -33,6 +34,10 @@ const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  @media (max-width: 768px) {
+    margin: 0px;
+    padding: 0px;
+  }
 `
 
 const Title = styled.h1`
@@ -44,6 +49,7 @@ const Title = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 18px;
+    line-height: 20px;
   }
 `
 

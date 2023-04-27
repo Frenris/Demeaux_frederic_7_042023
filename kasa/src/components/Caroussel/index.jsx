@@ -10,6 +10,10 @@ const ContainerCaroussel = styled.div`
   position: relative;
   width: 100%;
   height: 415px;
+  @media (max-width: 768px) {
+    height: 255px;
+    padding: 0rem 1.5rem;
+  }
 `
 const ContentCaroussel = styled.div`
   width: 100%;
@@ -33,6 +37,10 @@ const Arrows = styled.img`
   transform: translateY(-50%);
   z-index: 2;
   cursor: pointer;
+  @media (max-width: 768px) {
+    width: 12px;
+    height: 20px;
+  }
 `
 
 const ArrowLeft = styled(Arrows)`
@@ -73,25 +81,29 @@ const Caroussel = () => {
     setCurrent(current === length - 1 ? 0 : current + 1)
   }
 
-  const { IdGrid } = useParams()
-  const logement = AppartmentsDatas.find((product) => product.id === IdGrid)
+  const { idGrid } = useParams()
+  const logement = AppartmentsDatas.find((product) => product.id === idGrid)
 
   const length = logement?.pictures?.length || 0
+
+/* eslint-disable no-console */
+console.log(logement.pictures[current]);
+/* eslint-enable no-console */
 
   return (
     <ContainerCaroussel>
       {length > 1 && (
-        <ArrowLeft src={Back} alt="Flèche de gauche" onClick={moveToPrevious} />
+        <ArrowLeft src={Back} alt="Flèche de gauche" onClick={moveToNext} />
       )}
 
       <ContentCaroussel id="caroussel" onScroll={handleScroll}>
-        {AppartmentsDatas[current].pictures.map((picture, index) => (
-          <ImgCaroussel key={index} src={picture} alt="Photo appartement" />
-        ))}
+        
+          <ImgCaroussel src={logement.pictures[current]} alt="Photo appartement" />
+        
       </ContentCaroussel>
 
       {length > 1 && (
-        <ArrowRight src={Forward} alt="Right arrow" onClick={moveToNext} />
+        <ArrowRight src={Forward} alt="Right arrow" onClick={moveToPrevious} />
       )}
 
       <PicturesLength>

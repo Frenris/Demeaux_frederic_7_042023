@@ -56,6 +56,7 @@ const CardWrapper = styled.div`
     padding: 0px;
     gap: 0px;
     background: ${colors.tertiary};
+    margin-top: 15px;
   }
 `
 

@@ -15,6 +15,7 @@ const Host = styled.h2`
   justify-content: flex-end;
   @media (max-width: 768px) {
     font-size: 12px;
+    margin-bottom: 0px;
   }
 `
 
@@ -35,9 +36,17 @@ const HostInfo = () => {
   const logement = AppartementsDatas.find((product) => product.id === idGrid)
   const { host } = logement
   const { name, picture } = host
+  const firstName = name.split(" ")[0]
+  const lastName = name.split(" ")[1]
+
+  /* eslint-disable no-console */
+console.log(firstName);
+console.log(lastName)
+/* eslint-enable no-console */
+
   return (
     <Host>
-      {name}
+      {firstName}<br/>{lastName}
       <HostImage src={picture} alt={name} />
     </Host>
   )

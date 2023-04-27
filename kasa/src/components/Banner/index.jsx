@@ -30,6 +30,7 @@ const BannerImage = styled.div`
   @media screen and (width <= 768px) {
     justify-content: flex-start;
     height: 111px;
+    width: 335px;
     }
 `
 

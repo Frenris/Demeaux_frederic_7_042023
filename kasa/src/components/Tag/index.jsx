@@ -9,7 +9,7 @@ const Tags = styled.div`
   flex-wrap: wrap;
   margin: 15px 0 10px 0;
   @media (max-width: 768px) {
-    margin-top: 10px;
+    margin: 0px;
   }
 `
 

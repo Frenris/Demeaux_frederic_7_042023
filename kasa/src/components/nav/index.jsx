@@ -6,6 +6,9 @@ const NavWrapper = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    padding: 0rem 0rem;
+    }
 `
 const NavLink = styled.a`
   position: relative;
@@ -36,6 +39,7 @@ const NavLink = styled.a`
 
   @media (max-width: 768px) {
     font-size: 12px;
+    text-transform: uppercase;
     }
 `
 
