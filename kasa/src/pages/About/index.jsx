@@ -11,8 +11,13 @@ const AboutWrapper = styled.div`
   padding: 0 6rem;
 
   @media (max-width: 768px) {
+    margin-top: 25px;
+    padding: 1rem 1rem;
+  }
+
+  @media (max-width: 480px) {
     padding: 1.5rem 1rem;
-    }
+  }
 `
 
 const About = () => {

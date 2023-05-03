@@ -10,7 +10,7 @@ const ContainerCaroussel = styled.div`
   position: relative;
   width: 100%;
   height: 415px;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     height: 255px;
     padding: 0rem 1.5rem;
   }
@@ -37,7 +37,7 @@ const Arrows = styled.img`
   transform: translateY(-50%);
   z-index: 2;
   cursor: pointer;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     width: 12px;
     height: 20px;
   }
@@ -86,9 +86,9 @@ const Caroussel = () => {
 
   const length = logement?.pictures?.length || 0
 
-/* eslint-disable no-console */
-console.log(logement.pictures[current]);
-/* eslint-enable no-console */
+  /* eslint-disable no-console */
+  console.log(logement.pictures[current])
+  /* eslint-enable no-console */
 
   return (
     <ContainerCaroussel>
@@ -97,9 +97,10 @@ console.log(logement.pictures[current]);
       )}
 
       <ContentCaroussel id="caroussel" onScroll={handleScroll}>
-        
-          <ImgCaroussel src={logement.pictures[current]} alt="Photo appartement" />
-        
+        <ImgCaroussel
+          src={logement.pictures[current]}
+          alt="Photo appartement"
+        />
       </ContentCaroussel>
 
       {length > 1 && (

@@ -1,9 +1,7 @@
-import colors from "../../utils/style/colors"
-import styled from "styled-components"
+import colors from '../../utils/style/colors'
+import styled from 'styled-components'
 
-const ErrorWrapper = styled.div`
-  
-`
+const ErrorWrapper = styled.div``
 
 const ErrorTitle = styled.h1`
   font-weight: 700;
@@ -12,9 +10,9 @@ const ErrorTitle = styled.h1`
   color: ${colors.primary};
   margin: 80px 0 0 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     font-size: 96px;
-    }
+  }
 `
 
 const ErrorContent = styled.p`
@@ -23,11 +21,11 @@ const ErrorContent = styled.p`
   text-align: center;
   color: ${colors.primary};
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     margin: 0 85px;
     font-size: 18px;
     width: 55%;
-    }
+  }
 `
 
 const NavContainer = styled.div`
@@ -66,25 +64,21 @@ const NavLink = styled.a`
     width: 50%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     font-size: 14px;
-    }
+  }
 `
 
 const Error = () => {
-    return (
-      <ErrorWrapper>
-        <ErrorTitle>
-          404
-        </ErrorTitle>
-        <ErrorContent>
-          Oups! La page que vous demandez n'existe pas.
-        </ErrorContent>
-        <NavContainer>
-          <NavLink href="/">Retourner sur la page d’accueil</NavLink>
-        </NavContainer>
-      </ErrorWrapper>
-    )
-  }
-  
-  export default Error
+  return (
+    <ErrorWrapper>
+      <ErrorTitle>404</ErrorTitle>
+      <ErrorContent>Oups! La page que vous demandez n'existe pas.</ErrorContent>
+      <NavContainer>
+        <NavLink href="/">Retourner sur la page d’accueil</NavLink>
+      </NavContainer>
+    </ErrorWrapper>
+  )
+}
+
+export default Error

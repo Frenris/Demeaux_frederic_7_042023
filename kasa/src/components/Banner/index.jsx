@@ -27,10 +27,11 @@ const BannerImage = styled.div`
   background-position: center;
   border-radius: 25px;
 
-  @media screen and (width <= 768px) {
+
+  @media screen and (max-width: 768px) {
     justify-content: flex-start;
     height: 111px;
-    width: 335px;
+    width: 100%;
     }
 `
 
@@ -41,10 +42,17 @@ const StyledTitle = styled.h1`
   text-align: center;
   color: ${colors.tertiary};
 
-  @media screen and (width <= 768px) {
+  @media (max-width: 768px) {
+    text-align: start;
+    font-size: 36px;
+    width: 80%;
+    padding: 0 1rem;
+  }
+
+  @media screen and (max-width: 480px) {
     text-align: start;
     font-size: 24px;
-    width: 55%;
+    width: 60%;
     padding: 0 1rem;
     }
 `

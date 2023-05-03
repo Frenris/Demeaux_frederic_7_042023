@@ -11,7 +11,7 @@ const AppartmentWrapper = styled.div`
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     margin: 20px 0px;
     height: 255px;
   }
@@ -23,7 +23,7 @@ const AppartmentImage = styled.img`
   height: 100%;
   object-fit: cover;
   filter: brightness(80%);
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     width: 100%;
     height: 255px;
   }
@@ -53,8 +53,12 @@ const CardWrapper = styled.div`
   gap: 50px;
   background: ${colors.gridBackgroundLight};
   @media (max-width: 768px) {
-    padding: 0px;
+    margin-top: 25px;
+    padding: 6px 0;
     gap: 0px;
+  }
+  @media (max-width: 480px) {
+    padding: 0px;
     background: ${colors.tertiary};
     margin-top: 15px;
   }
@@ -65,8 +69,11 @@ const CardContainer = styled.div`
   margin: 56px 20px;
   min-width: 250px;
   @media (max-width: 768px) {
-  flex: 0px;
-  margin: 0px;
+    margin: 28px 10px;
+  }
+  @media (max-width: 480px) {
+    flex: 0px;
+    margin: 10px;
   }
   &:first-child {
     margin-left: 0;

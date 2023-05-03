@@ -11,7 +11,7 @@ const AppartmentWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     width: 100%;
     flex-direction: column;
   }
@@ -30,6 +30,9 @@ const CollapseTextWrapper = styled.div`
   font-size: 18px;
   line-height: 26px;
   @media (max-width: 768px) {
+    font-size: 15px;
+  }
+  @media (max-width: 480px) {
     font-size: 12px;
   }
 `
@@ -40,6 +43,9 @@ const CollapseTextContent = styled.p`
   line-height: 26px;
   color: ${colors.primary};
   @media (max-width: 768px) {
+    font-size: 15px;
+  }
+  @media (max-width: 480px) {
     font-size: 12px;
   }
 `
@@ -48,7 +54,7 @@ const CollapseDesEquip = styled.div`
   display: flex;
   width: 45%;
   flex-direction: column;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     width: 100%;
   }
 `
@@ -63,6 +69,10 @@ const CollapseContentWrapper = styled.div`
   flex: 1;
 
   @media (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 12px;
   }
 `

@@ -14,7 +14,7 @@ const GridWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     flex-direction: column;
     margin: 15px 0 0;
   }
@@ -26,6 +26,9 @@ const LeftSection = styled.div`
   align-items: flex-start;
   margin-right: 50px;
   @media (max-width: 768px) {
+    margin-right: 25px;
+  }
+  @media (max-width: 480px) {
     width: 100%;
   }
 `
@@ -34,7 +37,7 @@ const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     margin: 0px;
     padding: 0px;
   }
@@ -48,6 +51,11 @@ const Title = styled.h1`
   margin-bottom: 10px;
 
   @media (max-width: 768px) {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 18px;
     line-height: 20px;
   }
@@ -60,6 +68,10 @@ const Location = styled.div`
   margin-bottom: 10px;
 
   @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 14px;
   }
 `
@@ -68,7 +80,7 @@ const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     width: 100%;
     flex-direction: row-reverse;
   }

@@ -6,11 +6,11 @@ import grayStar from '../../assets/grayStar.png'
 import redStar from '../../assets/redStar.png'
 
 const RatingWrapper = styled.div`
-  display:flex;
+  display: flex;
   font-weight: 500;
   align-self: flex-end;
   justify-content: flex-end;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     margin-bottom: 0px;
   }
 `
@@ -23,6 +23,10 @@ const Rate = styled.div`
 const StarImg = styled.img`
   margin-right: 5px;
   @media (max-width: 768px) {
+    width: 18px;
+    height: 18px;
+  }
+  @media (max-width: 480px) {
     width: 13px;
     height: 13px;
   }

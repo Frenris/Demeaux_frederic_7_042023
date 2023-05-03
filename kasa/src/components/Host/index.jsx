@@ -13,7 +13,7 @@ const Host = styled.h2`
   width: 100%;
   align-items: center;
   justify-content: flex-end;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     font-size: 12px;
     margin-bottom: 0px;
   }
@@ -25,7 +25,7 @@ const HostImage = styled.img`
   border-radius: 100%;
   object-fit: cover;
   margin-left: 10px;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     width: 32px;
     height: 32px;
   }
@@ -36,17 +36,19 @@ const HostInfo = () => {
   const logement = AppartementsDatas.find((product) => product.id === idGrid)
   const { host } = logement
   const { name, picture } = host
-  const firstName = name.split(" ")[0]
-  const lastName = name.split(" ")[1]
+  const firstName = name.split(' ')[0]
+  const lastName = name.split(' ')[1]
 
   /* eslint-disable no-console */
-console.log(firstName);
-console.log(lastName)
-/* eslint-enable no-console */
+  console.log(firstName)
+  console.log(lastName)
+  /* eslint-enable no-console */
 
   return (
     <Host>
-      {firstName}<br/>{lastName}
+      {firstName}
+      <br />
+      {lastName}
       <HostImage src={picture} alt={name} />
     </Host>
   )

@@ -6,9 +6,9 @@ const NavWrapper = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     padding: 0rem 0rem;
-    }
+  }
 `
 const NavLink = styled.a`
   position: relative;
@@ -38,9 +38,14 @@ const NavLink = styled.a`
   }
 
   @media (max-width: 768px) {
-    font-size: 12px;
     text-transform: uppercase;
-    }
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    margin-left: 25px;
+  }
 `
 
 const Navigation = () => {

@@ -13,8 +13,12 @@ const AboutWrapper = styled.div`
   width: 80%;
 
   @media (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media (max-width: 480px) {
     width: 100%;
-    }
+  }
 `
 const TextWrapper = styled.div`
   display: flex;
@@ -29,9 +33,9 @@ const TextWrapper = styled.div`
   padding: 15px;
   border-radius: 5px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     font-size: 12px;
-    }
+  }
 `
 
 const CollapseContentWrapper = styled.div`
@@ -45,12 +49,12 @@ const CollapseContentWrapper = styled.div`
 const TextContent = styled.p`
   font-weight: 400;
   font-size: 24px;
-  color:${colors.primary};
+  color: ${colors.primary};
   margin: 30px 15px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     font-size: 12px;
-    }
+  }
 `
 const ArrowIcon = styled.img`
   position: relative;

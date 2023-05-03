@@ -15,6 +15,10 @@ const GridContainer = styled.div`
   padding: 0 6rem;
 
   @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 480px) {
     padding: 0 1.5rem;
   }
 `

@@ -8,7 +8,7 @@ const Tags = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 15px 0 10px 0;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     margin: 0px;
   }
 `
@@ -23,6 +23,9 @@ const Tag = styled.span`
   margin-right: 10px;
   border-radius: 15px;
   @media (max-width: 768px) {
+    font-size: 12px;
+  }
+  @media (max-width: 480px) {
     font-size: 10px;
   }
 `
