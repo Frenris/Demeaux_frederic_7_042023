@@ -43,15 +43,16 @@ const AppartmentTitle = styled.h2`
 `
 
 const CardWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-radius: 25px;
-  gap: 50px;
-  background: ${colors.gridBackgroundLight};
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    gap: 50px;
+    background: ${colors.gridBackgroundLight};
+
   @media (max-width: 768px) {
     margin-top: 25px;
     padding: 6px 0;
@@ -67,13 +68,14 @@ const CardWrapper = styled.div`
 const CardContainer = styled.div`
   flex: 0 0 340px;
   margin: 56px 20px;
-  min-width: 250px;
+  min-width: 22%;
   @media (max-width: 768px) {
     margin: 28px 10px;
   }
   @media (max-width: 480px) {
     flex: 0px;
     margin: 10px;
+    min-width: 250px;
   }
   &:first-child {
     margin-left: 0;

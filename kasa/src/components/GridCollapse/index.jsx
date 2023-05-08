@@ -66,8 +66,7 @@ const CollapseContentWrapper = styled.div`
   z-index: -1;
   background: ${colors.gridBackgroundLight};
   border-radius: 10px;
-  flex: 1;
-
+  min-height: 370px;
   @media (max-width: 768px) {
     font-size: 13px;
   }
@@ -99,16 +98,16 @@ const AppartmentCollapse = ({ title, children }) => {
 
   return (
     <div>
-      <CollapseTextWrapper onClick={() => setActiveIndex(!activeIndex)}>
-        {title}
-        <ArrowIcon
-          src={activeIndex ? UpArrowImg : DownArrowImg}
-          alt="Arrow image collapse"
-        />
-      </CollapseTextWrapper>
-      {activeIndex ? (
-        <CollapseContentWrapper>{children}</CollapseContentWrapper>
-      ) : null}
+        <CollapseTextWrapper onClick={() => setActiveIndex(!activeIndex)}>
+          {title}
+          <ArrowIcon
+            src={activeIndex ? UpArrowImg : DownArrowImg}
+            alt="Arrow image collapse"
+          />
+        </CollapseTextWrapper>
+        {activeIndex ? (
+          <CollapseContentWrapper>{children}</CollapseContentWrapper>
+        ) : null}
     </div>
   )
 }
