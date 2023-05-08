@@ -68,9 +68,9 @@ const CollapseContentWrapper = styled.div`
   border-radius: 10px;
   min-height: 370px;
   @media (max-width: 768px) {
+    min-height: auto;
     font-size: 13px;
   }
-
   @media (max-width: 480px) {
     font-size: 12px;
   }
