@@ -13,7 +13,11 @@ const Host = styled.h2`
   width: 100%;
   align-items: center;
   justify-content: flex-end;
-  @media (max-width: 480px) {
+  @media (max-width: 1465px) {
+    margin-bottom: unset;
+    width: min-content;
+  }
+  @media (max-width: 768px) {
     font-size: 12px;
     margin-bottom: 0px;
   }
@@ -25,7 +29,7 @@ const HostImage = styled.img`
   border-radius: 100%;
   object-fit: cover;
   margin-left: 10px;
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     width: 32px;
     height: 32px;
   }

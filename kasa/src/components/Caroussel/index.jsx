@@ -37,10 +37,6 @@ const Arrows = styled.img`
   transform: translateY(-50%);
   z-index: 2;
   cursor: pointer;
-  @media (max-width: 480px) {
-    width: 12px;
-    height: 20px;
-  }
 `
 
 const ArrowLeft = styled(Arrows)`

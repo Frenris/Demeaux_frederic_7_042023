@@ -11,7 +11,7 @@ const AppartmentWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     width: 100%;
     flex-direction: column;
   }
@@ -54,7 +54,7 @@ const CollapseDesEquip = styled.div`
   display: flex;
   width: 45%;
   flex-direction: column;
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `

@@ -80,9 +80,12 @@ const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  @media (max-width: 480px) {
-    width: 100%;
+  @media (max-width: 1465px) {
+    align-items: center;
+    margin-top: 0px;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
   }
 `
 
